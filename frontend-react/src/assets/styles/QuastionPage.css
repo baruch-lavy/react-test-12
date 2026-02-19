@@ -1,0 +1,35 @@
+
+
+.quastions-page {
+    max-width: 1200px;
+    margin: 1rem auto;
+
+    form {
+        margin-top: 5rem;
+        display: flex;
+        gap: 0.5rem;
+        flex-direction: column;
+        border: 3px solid lightskyblue;
+
+        padding: 1rem;
+
+        input {
+            padding: 0.5rem;
+        }
+
+        button {
+            padding: 0.5rem;
+            background: blue;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .navigation-btns {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
