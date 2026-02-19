@@ -58,6 +58,7 @@ export function QuestionsPage() {
   }
 
   function nextQuastion() {
+    setIsErrorMsg(false)
     setQuastionId(prev => {
         return prev +1
     })
