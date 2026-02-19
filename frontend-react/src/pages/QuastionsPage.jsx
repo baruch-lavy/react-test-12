@@ -21,7 +21,7 @@ export function QuestionsPage() {
 
   useEffect(() => {
     generateQuastion();
-  }, []);
+  }, [quastionId]);
 
   function generateQuastion() {
     const idx = getRandomIntInclusive(0, dataForQuastions.length);
@@ -55,6 +55,12 @@ export function QuestionsPage() {
     } else {
       setIsErrorMsg(true);
     }
+  }
+
+  function nextQuastion() {
+    setQuastionId(prev => {
+        return prev +1
+    })
   }
 
   function getRandomIntInclusive(min, max) {
@@ -97,7 +103,7 @@ export function QuestionsPage() {
 
         <div className="navigation-btns">
           <button onClick={handleClick}>To data Page</button>
-          <button>Next Quastion</button>
+          <button onClick={nextQuastion}>Next Quastion</button>
         </div>
       </form>
 
